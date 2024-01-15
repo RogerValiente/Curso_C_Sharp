@@ -37,7 +37,13 @@ namespace Desafio1
         public int ID
         {
             get { return _Id; }
-            set { _Id = value; }
+            set
+            {
+                if (this._Id != value)
+                {
+                    this._Id = value;
+                }
+            }
         }
 
         [Required]
@@ -45,7 +51,13 @@ namespace Desafio1
         public string Nombre
         {
             get { return _Nombre; }
-            set { _Nombre = value; }
+            set
+            {
+                if (this._Nombre != value)
+                {
+                    this._Nombre = value;
+                }
+            }
         }
 
         [Required]
@@ -53,7 +65,13 @@ namespace Desafio1
         public string Apellido
         {
             get { return _Apellido; }
-            set { _Apellido = value; }
+            set
+            {
+                if (this._Apellido != value)
+                {
+                    this._Apellido = value;
+                }
+            }
         }
 
         [Required]
@@ -61,7 +79,13 @@ namespace Desafio1
         public string NombreUsuario
         {
             get { return _NombreUsuario; }
-            set { _NombreUsuario = value; }
+            set
+            {
+                if (this._NombreUsuario != value)
+                {
+                    this._NombreUsuario = value;
+                }
+            }
         }
 
         [Required]
@@ -69,7 +93,13 @@ namespace Desafio1
         public string Contraseña
         {
             get { return _Contraseña; }
-            set { _Contraseña = value; }
+            set
+            {
+                if (this._Contraseña != value)
+                {
+                    this._Contraseña = value;
+                }
+            }
         }
 
         [Required]
@@ -77,7 +107,13 @@ namespace Desafio1
         public string Mail
         {
             get { return _Mail; }
-            set { _Mail = value; }
+            set
+            {
+                if (this._Mail != value)
+                {
+                    this._Mail = value;
+                }
+            }
         }
 
         #endregion Propiedades

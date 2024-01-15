@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -32,29 +34,54 @@ namespace Desafio1
         #endregion Constructores
 
         #region Propiedades
-
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id
         {
             get { return _Id; }
-            set { _Id = value; }
+            set
+            {
+                if (this._Id != value)
+                {
+                    this._Id = value;
+                }
+            }
         }
 
         public int IdProducto
         {
             get { return _IdProducto; }
-            set { _IdProducto = value; }
+            set
+            {
+                if (this._IdProducto != value)
+                {
+                    this._IdProducto = value;
+                }
+            }
         }
 
         public int Stock
         {
             get { return _Stock; }
-            set { _Stock = value; }
+            set
+            {
+                if (this._Stock != value)
+                {
+                    this._Stock = value;
+                }
+            }
         }
 
         public int IdVenta
         {
             get { return _IdVenta; }
-            set { _IdVenta = value; }
+            set
+            {
+                if (this._IdVenta != value)
+                {
+                    this._IdVenta = value;
+                }
+            }
         }
 
         #endregion Propiedades

@@ -1,4 +1,7 @@
-﻿public class Producto
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+public class Producto
 {
     #region Variables
 
@@ -26,41 +29,80 @@
     #endregion Constructores
 
     #region Propiedades
-
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id
     {
         get { return _Id; }
-        set { _Id = value; }
+        set
+        {
+            if (this._Id != value)
+            {
+                this._Id = value;
+            }
+        }
     }
 
+    [Required]
+    [MaxLength(2000)]
     public string Description
     {
         get { return _Description; }
-        set { _Description = value; }
+        set
+        {
+            if (this._Description != value)
+            {
+                this._Description = value;
+            }
+        }
     }
 
     public double Costo
     {
         get { return _Costo; }
-        set { _Costo = value; }
+        set
+        {
+            if (this._Costo != value)
+            {
+                this._Costo = value;
+            }
+        }
     }
 
     public double PrecioVenta
     {
         get { return _PrecioVenta; }
-        set { _PrecioVenta = value; }
+        set
+        {
+            if (this._PrecioVenta != value)
+            {
+                this._PrecioVenta = value;
+            }
+        }
     }
 
     public int Stock
     {
         get { return _Stock; }
-        set { _Stock = value; }
+        set
+        {
+            if (this._Stock != value)
+            {
+                this._Stock = value;
+            }
+        }
     }
 
     public int IdUsuario
     {
         get { return _IdUsuario; }
-        set { _IdUsuario = value; }
+        set
+        {
+            if (this._IdUsuario != value)
+            {
+                this._IdUsuario = value;
+            }
+        }
     }
 
     #endregion Propiedades
